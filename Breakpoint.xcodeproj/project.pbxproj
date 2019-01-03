@@ -16,6 +16,10 @@
 		ED2B87E021DDF8F4005D0BE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2B87DE21DDF8F4005D0BE5 /* LaunchScreen.storyboard */; };
 		ED2B87EB21DDFBDF005D0BE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED2B87EA21DDFBDF005D0BE5 /* GoogleService-Info.plist */; };
 		ED2B87EE21DDFF8B005D0BE5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B87ED21DDFF8B005D0BE5 /* DataService.swift */; };
+		ED2B87F021DE1F80005D0BE5 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B87EF21DE1F80005D0BE5 /* AuthViewController.swift */; };
+		ED2B87F221DE1FAE005D0BE5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B87F121DE1FAE005D0BE5 /* LoginViewController.swift */; };
+		ED2B87F421DE1FED005D0BE5 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B87F321DE1FED005D0BE5 /* InsetTextField.swift */; };
+		ED2B87F621DE2569005D0BE5 /* ShadowUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B87F521DE2569005D0BE5 /* ShadowUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		ED2B87E121DDF8F4005D0BE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED2B87EA21DDFBDF005D0BE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED2B87ED21DDFF8B005D0BE5 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		ED2B87EF21DE1F80005D0BE5 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		ED2B87F121DE1FAE005D0BE5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ED2B87F321DE1FED005D0BE5 /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
+		ED2B87F521DE2569005D0BE5 /* ShadowUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowUIView.swift; sourceTree = "<group>"; };
 		EEEE5AEF0A6C68FD7ACA62CC /* Pods-Breakpoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakpoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breakpoint/Pods-Breakpoint.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +111,8 @@
 			children = (
 				ED2B87D521DDF8F1005D0BE5 /* FirstViewController.swift */,
 				ED2B87D721DDF8F1005D0BE5 /* SecondViewController.swift */,
+				ED2B87EF21DE1F80005D0BE5 /* AuthViewController.swift */,
+				ED2B87F121DE1FAE005D0BE5 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -110,6 +120,8 @@
 		ED2B87E821DDFAAF005D0BE5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ED2B87F321DE1FED005D0BE5 /* InsetTextField.swift */,
+				ED2B87F521DE2569005D0BE5 /* ShadowUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,9 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2B87F221DE1FAE005D0BE5 /* LoginViewController.swift in Sources */,
 				ED2B87D821DDF8F1005D0BE5 /* SecondViewController.swift in Sources */,
 				ED2B87D421DDF8F1005D0BE5 /* AppDelegate.swift in Sources */,
+				ED2B87F021DE1F80005D0BE5 /* AuthViewController.swift in Sources */,
+				ED2B87F621DE2569005D0BE5 /* ShadowUIView.swift in Sources */,
 				ED2B87D621DDF8F1005D0BE5 /* FirstViewController.swift in Sources */,
+				ED2B87F421DE1FED005D0BE5 /* InsetTextField.swift in Sources */,
 				ED2B87EE21DDFF8B005D0BE5 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
