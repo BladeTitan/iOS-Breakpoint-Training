@@ -18,6 +18,10 @@ class LoginViewController: UIViewController {
         passwordTxtField.delegate = self
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @IBAction func dismissBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

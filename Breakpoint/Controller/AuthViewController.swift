@@ -14,6 +14,10 @@ class AuthViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @IBAction func signInByFacebookBtnPressed(_ sender: UIButton) {
         
     }
