@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cx5-bP-7Pv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -123,6 +123,9 @@
                                                 <state key="normal" title="LOGIN WITH FB">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signInByFacebookBtnPressed:" destination="cx5-bP-7Pv" eventType="touchUpInside" id="tIf-0f-fZD"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6k-VH-9iF">
                                                 <rect key="frame" x="0.0" y="161.5" width="303" height="71"/>
@@ -131,6 +134,9 @@
                                                 <state key="normal" title="LOGIN WITH G+">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signInByGoogleBtnPressed:" destination="cx5-bP-7Pv" eventType="touchUpInside" id="AnO-Yo-Dpa"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mb-C5-c7c">
                                                 <rect key="frame" x="0.0" y="242.5" width="303" height="70.5"/>
@@ -149,6 +155,9 @@
                                         <state key="normal" title=" BY EMAIL" image="emailIcon">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInByEmailBtnPressed:" destination="cx5-bP-7Pv" eventType="touchUpInside" id="y6U-Do-037"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25490196078431371" green="0.27058823529411763" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -194,6 +203,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ux-eX-65d">
                                 <rect key="frame" x="28" y="28" width="21" height="22"/>
                                 <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="dismissBtnPressed:" destination="qqW-7U-h5a" eventType="touchUpInside" id="bmv-T5-HCt"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Nk8-7o-RhG">
                                 <rect key="frame" x="36" y="70" width="301" height="161"/>
@@ -232,6 +244,9 @@
                                 <state key="normal" title="SIGN IN">
                                     <color key="titleColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInBtnPressed:" destination="qqW-7U-h5a" eventType="touchUpInside" id="r9D-9i-kvi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -246,6 +261,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pvZ-yy-xbP"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTxtField" destination="fNp-J6-tVk" id="xJn-Ta-efZ"/>
+                        <outlet property="passwordTxtField" destination="nPO-L0-tD4" id="dGV-BJ-w8I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w0m-pY-2GI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
