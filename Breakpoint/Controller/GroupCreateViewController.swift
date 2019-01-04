@@ -17,6 +17,7 @@ class GroupCreateViewController: UIViewController {
     @IBOutlet weak var addMemberLbl: UILabel!
     
     var emailArray = [String]()
+    var chosenUserArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,15 @@ class GroupCreateViewController: UIViewController {
         emailTextField.delegate = self
         
         emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        doneBtn.isHidden = true
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     @objc func textFieldDidChange() {
@@ -57,8 +67,14 @@ extension GroupCreateViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as? UserTableViewCell {
             let image = UIImage(named: "defaultProfileImage")!
-
-            cell.setupCell(profileImage: image, email: emailArray[indexPath.row], isSelected: true)
+            let email = emailArray[indexPath.row]
+            var selected = false
+            
+            if(chosenUserArray.contains(email)) {
+                selected = true
+            }
+            
+            cell.setupCell(profileImage: image, email: email, isSelected: selected)
             
             return cell
         } else {
@@ -66,7 +82,28 @@ extension GroupCreateViewController: UITableViewDelegate, UITableViewDataSource 
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let email = emailArray[indexPath.row]
+        
+        if(!chosenUserArray.contains(email)) {
+            chosenUserArray.append(email)
+        } else {
+            if let index = chosenUserArray.firstIndex(of: email) {
+                chosenUserArray.remove(at: index)
+            }
+        }
+        
+        addMemberLbl.text = chosenUserArray.joined(separator: ", ")
+        
+        if(addMemberLbl.text == "") {
+            addMemberLbl.text = "add people to your group"
+            doneBtn.isHidden = true
+        } else {
+            doneBtn.isHidden = false
+        }
+    }
 }
 
 extension GroupCreateViewController: UITextFieldDelegate {
