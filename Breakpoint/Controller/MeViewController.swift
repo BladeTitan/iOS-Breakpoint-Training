@@ -16,8 +16,12 @@ class MeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        emailLbl.text = Auth.auth().currentUser?.email
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -25,6 +29,13 @@ class MeViewController: UIViewController {
     }
 
     @IBAction func signOutBtnPressed(_ sender: Any) {
-        try? Auth.auth().signOut()
+        do {
+            try Auth.auth().signOut()
+            let authVC = storyboard!.instantiateViewController(withIdentifier: "AuthViewController")
+            present(authVC, animated: true, completion: nil)
+        }
+        catch {
+            print(error)
+        }
     }
 }

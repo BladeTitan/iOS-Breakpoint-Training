@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class AuthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        if(Auth.auth().currentUser != nil) {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

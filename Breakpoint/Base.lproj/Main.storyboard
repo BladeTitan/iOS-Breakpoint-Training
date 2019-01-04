@@ -52,7 +52,7 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="548"/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="w73-zm-GZq" customClass="FeedTableViewCell" customModule="Breakpoint" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="100" id="w73-zm-GZq" customClass="FeedTableViewCell" customModule="Breakpoint" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w73-zm-GZq" id="YqG-Ga-8de">
@@ -60,7 +60,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ct2-eP-NpK">
-                                                    <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                                    <rect key="frame" x="10" y="25" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="7UB-K8-fj4"/>
                                                         <constraint firstAttribute="width" constant="50" id="eV5-Gc-lqE"/>
@@ -89,12 +89,12 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.12861260769999999" green="0.1434175372" blue="0.1819418669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="Ct2-eP-NpK" firstAttribute="top" secondItem="YqG-Ga-8de" secondAttribute="top" constant="10" id="4bG-Sl-91X"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="jDD-e2-Xhd" secondAttribute="trailing" constant="10" id="9pb-6u-LFu"/>
                                                 <constraint firstItem="Ct2-eP-NpK" firstAttribute="leading" secondItem="YqG-Ga-8de" secondAttribute="leading" constant="10" id="FZt-Xd-LAC"/>
                                                 <constraint firstItem="jDD-e2-Xhd" firstAttribute="leading" secondItem="Ct2-eP-NpK" secondAttribute="trailing" constant="10" id="QoB-Vs-MTw"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="jDD-e2-Xhd" secondAttribute="bottom" constant="10" id="R60-m8-C5a"/>
                                                 <constraint firstItem="jDD-e2-Xhd" firstAttribute="top" secondItem="YqG-Ga-8de" secondAttribute="topMargin" constant="10" id="uJS-ka-uhT"/>
+                                                <constraint firstItem="Ct2-eP-NpK" firstAttribute="centerY" secondItem="YqG-Ga-8de" secondAttribute="centerY" id="vmo-2y-VpZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -119,6 +119,9 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="feed-tabIcon" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="tableView" destination="YVP-3x-oeB" id="HuR-e9-ifo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
