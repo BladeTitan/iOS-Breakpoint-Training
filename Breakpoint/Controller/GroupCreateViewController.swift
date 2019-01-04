@@ -16,11 +16,28 @@ class GroupCreateViewController: UIViewController {
     @IBOutlet weak var doneBtn: UIButton!
     @IBOutlet weak var addMemberLbl: UILabel!
     
+    var emailArray = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        emailTextField.delegate = self
+        
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+    }
+    
+    @objc func textFieldDidChange() {
+        if(emailTextField.text == "") {
+            self.emailArray.removeAll()
+            tableView.reloadData()
+        } else {
+            DataService.instance.getEmail(forSearchQuery: emailTextField.text!) { (emails) in
+                self.emailArray = emails
+                self.tableView.reloadData()
+            }
+        }
     }
 
     @IBAction func closeBtnPressed(_ sender: Any) {
@@ -34,14 +51,14 @@ class GroupCreateViewController: UIViewController {
 
 extension GroupCreateViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return emailArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as? UserTableViewCell {
             let image = UIImage(named: "defaultProfileImage")!
 
-            cell.setupCell(profileImage: image, email: "test@test.com", isSelected: true)
+            cell.setupCell(profileImage: image, email: emailArray[indexPath.row], isSelected: true)
             
             return cell
         } else {
@@ -49,5 +66,9 @@ extension GroupCreateViewController: UITableViewDelegate, UITableViewDataSource 
         }
     }
     
+    
+}
+
+extension GroupCreateViewController: UITextFieldDelegate {
     
 }
