@@ -26,6 +26,7 @@
 		ED52B89C21DF331B000BB0C1 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED52B89B21DF331B000BB0C1 /* UIViewExt.swift */; };
 		ED52B89E21DF3D16000BB0C1 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED52B89D21DF3D16000BB0C1 /* FeedTableViewCell.swift */; };
 		ED52B8A021DF3E47000BB0C1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED52B89F21DF3E47000BB0C1 /* Message.swift */; };
+		ED52B8A221DF5443000BB0C1 /* GroupCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED52B8A121DF5443000BB0C1 /* GroupCreateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		ED52B89B21DF331B000BB0C1 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		ED52B89D21DF3D16000BB0C1 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		ED52B89F21DF3E47000BB0C1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		ED52B8A121DF5443000BB0C1 /* GroupCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCreateViewController.swift; sourceTree = "<group>"; };
 		EEEE5AEF0A6C68FD7ACA62CC /* Pods-Breakpoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakpoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breakpoint/Pods-Breakpoint.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 				ED2B87F121DE1FAE005D0BE5 /* LoginViewController.swift */,
 				ED2B87F921DE39FD005D0BE5 /* MeViewController.swift */,
 				ED52B89821DF303F000BB0C1 /* CreatePostViewController.swift */,
+				ED52B8A121DF5443000BB0C1 /* GroupCreateViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				ED2B87F621DE2569005D0BE5 /* ShadowUIView.swift in Sources */,
 				ED52B89921DF303F000BB0C1 /* CreatePostViewController.swift in Sources */,
 				ED2B87D621DDF8F1005D0BE5 /* FeedViewController.swift in Sources */,
+				ED52B8A221DF5443000BB0C1 /* GroupCreateViewController.swift in Sources */,
 				ED2B87F421DE1FED005D0BE5 /* InsetTextField.swift in Sources */,
 				ED2B87EE21DDFF8B005D0BE5 /* DataService.swift in Sources */,
 				ED52B8A021DF3E47000BB0C1 /* Message.swift in Sources */,

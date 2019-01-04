@@ -27,6 +27,10 @@ class CreatePostViewController: UIViewController {
         
         usernameLbl.text = Auth.auth().currentUser?.email
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     @IBAction func closeBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
