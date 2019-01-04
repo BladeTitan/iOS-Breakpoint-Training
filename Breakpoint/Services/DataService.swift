@@ -38,4 +38,17 @@ class DataService {
     func createDBUser(uid: String, userData: Dictionary<String, Any>) {
         REF_USERS.child(uid).updateChildValues(userData)
     }
+    
+    func uploadPost(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, sendComplete: @escaping (_ status: Bool) -> ()) {
+        if let groupKey = groupKey {
+            
+        } else {
+            let values = [
+                "content": message,
+                "senderId": uid
+            ]
+            REF_FEED.childByAutoId().updateChildValues(values)
+            sendComplete(true)
+        }
+    }
 }

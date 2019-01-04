@@ -22,6 +22,9 @@
 		ED2B87F621DE2569005D0BE5 /* ShadowUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B87F521DE2569005D0BE5 /* ShadowUIView.swift */; };
 		ED2B87F821DE2765005D0BE5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B87F721DE2765005D0BE5 /* AuthService.swift */; };
 		ED2B87FA21DE39FD005D0BE5 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B87F921DE39FD005D0BE5 /* MeViewController.swift */; };
+		ED52B89921DF303F000BB0C1 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED52B89821DF303F000BB0C1 /* CreatePostViewController.swift */; };
+		ED52B89C21DF331B000BB0C1 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED52B89B21DF331B000BB0C1 /* UIViewExt.swift */; };
+		ED52B89E21DF3D16000BB0C1 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED52B89D21DF3D16000BB0C1 /* FeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		ED2B87F521DE2569005D0BE5 /* ShadowUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowUIView.swift; sourceTree = "<group>"; };
 		ED2B87F721DE2765005D0BE5 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		ED2B87F921DE39FD005D0BE5 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		ED52B89821DF303F000BB0C1 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		ED52B89B21DF331B000BB0C1 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		ED52B89D21DF3D16000BB0C1 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		EEEE5AEF0A6C68FD7ACA62CC /* Pods-Breakpoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakpoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breakpoint/Pods-Breakpoint.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +102,7 @@
 		ED2B87D221DDF8F1005D0BE5 /* Breakpoint */ = {
 			isa = PBXGroup;
 			children = (
+				ED52B89A21DF3309000BB0C1 /* Extensions */,
 				ED2B87EC21DDFF75005D0BE5 /* Services */,
 				ED2B87E821DDFAAF005D0BE5 /* View */,
 				ED2B87E721DDFAA1005D0BE5 /* Controller */,
@@ -118,6 +125,7 @@
 				ED2B87EF21DE1F80005D0BE5 /* AuthViewController.swift */,
 				ED2B87F121DE1FAE005D0BE5 /* LoginViewController.swift */,
 				ED2B87F921DE39FD005D0BE5 /* MeViewController.swift */,
+				ED52B89821DF303F000BB0C1 /* CreatePostViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -127,6 +135,7 @@
 			children = (
 				ED2B87F321DE1FED005D0BE5 /* InsetTextField.swift */,
 				ED2B87F521DE2569005D0BE5 /* ShadowUIView.swift */,
+				ED52B89D21DF3D16000BB0C1 /* FeedTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -145,6 +154,14 @@
 				ED2B87F721DE2765005D0BE5 /* AuthService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		ED52B89A21DF3309000BB0C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED52B89B21DF331B000BB0C1 /* UIViewExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,13 +283,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED52B89C21DF331B000BB0C1 /* UIViewExt.swift in Sources */,
 				ED2B87FA21DE39FD005D0BE5 /* MeViewController.swift in Sources */,
 				ED2B87F221DE1FAE005D0BE5 /* LoginViewController.swift in Sources */,
 				ED2B87D821DDF8F1005D0BE5 /* GroupsViewController.swift in Sources */,
 				ED2B87D421DDF8F1005D0BE5 /* AppDelegate.swift in Sources */,
+				ED52B89E21DF3D16000BB0C1 /* FeedTableViewCell.swift in Sources */,
 				ED2B87F821DE2765005D0BE5 /* AuthService.swift in Sources */,
 				ED2B87F021DE1F80005D0BE5 /* AuthViewController.swift in Sources */,
 				ED2B87F621DE2569005D0BE5 /* ShadowUIView.swift in Sources */,
+				ED52B89921DF303F000BB0C1 /* CreatePostViewController.swift in Sources */,
 				ED2B87D621DDF8F1005D0BE5 /* FeedViewController.swift in Sources */,
 				ED2B87F421DE1FED005D0BE5 /* InsetTextField.swift in Sources */,
 				ED2B87EE21DDFF8B005D0BE5 /* DataService.swift in Sources */,
