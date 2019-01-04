@@ -451,6 +451,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.12941176469999999" green="0.1450980392" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="8KM-Gl-iGE" firstAttribute="leading" secondItem="oIM-VV-dmL" secondAttribute="trailing" constant="66.5" id="6Ri-Tx-0pv"/>
                                     <constraint firstItem="oIM-VV-dmL" firstAttribute="centerY" secondItem="nR6-du-9VE" secondAttribute="centerY" id="IzW-65-gKn"/>
                                     <constraint firstItem="nR6-du-9VE" firstAttribute="leading" secondItem="tyf-tG-lqr" secondAttribute="leading" constant="20" id="RLB-GY-W9j"/>
                                     <constraint firstItem="8KM-Gl-iGE" firstAttribute="top" secondItem="tyf-tG-lqr" secondAttribute="top" constant="30" id="SjL-0l-CDs"/>
@@ -494,7 +495,7 @@
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="add people to your group" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRH-AX-dls">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="add people to your group" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="gRH-AX-dls">
                                         <rect key="frame" x="0.0" y="124" width="355" height="19"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
                                         <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

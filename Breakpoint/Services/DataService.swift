@@ -53,6 +53,17 @@ class DataService {
         }
     }
     
+    func createGroup(title: String, description: String, ids: [String], createComplete: @escaping (_ created: Bool) -> ()) {
+        let values: [String: Any] = [
+            "title": title,
+            "description": description,
+            "members": ids
+        ]
+        
+        REF_GROUPS.childByAutoId().updateChildValues(values)
+        createComplete(true)
+    }
+    
     func getAllFeedMessages(handler: @escaping (_ messages: [Message]) -> ()) {
         var messageArray = [Message]()
         
@@ -103,4 +114,25 @@ class DataService {
             handler(emailArray)
         }
     }
+    
+    func getIds(forUsername usernames: [String], handler: @escaping (_ uidArray: [String]) -> ()) {
+        var idArray = [String]()
+        
+        REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
+            guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot]
+                else { return }
+            
+            for user in userSnapshot {
+                let userEmail = user.childSnapshot(forPath: "email").value as! String
+                
+                if(usernames.contains(userEmail)) {
+                    idArray.append(user.key)
+                }
+            }
+            
+            handler(idArray)
+        }
+    }
+    
+    
 }

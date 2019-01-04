@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class GroupCreateViewController: UIViewController {
     @IBOutlet weak var titleTextField: InsetTextField!
@@ -55,7 +56,20 @@ class GroupCreateViewController: UIViewController {
     }
     
     @IBAction func doneBtnPressed(_ sender: Any) {
+        let title = titleTextField.text
+        let description = descriptionTextField.text
         
+        if(title != "" && description != "") {
+            chosenUserArray.append((Auth.auth().currentUser?.email)!)
+            
+            DataService.instance.createGroup(title: title!, description: description!, ids: chosenUserArray) { (completed) in
+                if(completed) {
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    print("Failed to create group")
+                }
+            }
+        }
     }
 }
 
