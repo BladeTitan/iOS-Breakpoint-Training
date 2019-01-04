@@ -357,6 +357,9 @@
                                             <constraint firstAttribute="height" constant="30" id="nQa-6d-dUX"/>
                                         </constraints>
                                         <state key="normal" image="addNewIcon"/>
+                                        <connections>
+                                            <segue destination="yFw-Qy-sSp" kind="presentation" id="afl-QS-vaN"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_groups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slY-Qa-ok5">
                                         <rect key="frame" x="149.5" y="34.5" width="76" height="21"/>
@@ -420,9 +423,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KM-Gl-iGE">
-                                        <rect key="frame" x="288" y="30" width="67" height="30"/>
+                                        <rect key="frame" x="303" y="30" width="52" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="67" id="7ix-R6-LSZ"/>
                                             <constraint firstAttribute="height" constant="30" id="n7q-ge-Frg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
@@ -507,17 +509,55 @@
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="87b-p3-cAN">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="87b-p3-cAN">
                                         <rect key="frame" x="0.0" y="213" width="355" height="364"/>
                                         <color key="backgroundColor" red="0.25515213609999998" green="0.27285820249999998" blue="0.31181350349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oB1-Kt-TZz">
-                                                <rect key="frame" x="0.0" y="28" width="355" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserTableViewCell" id="oB1-Kt-TZz" customClass="UserTableViewCell" customModule="Breakpoint" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="355" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oB1-Kt-TZz" id="Uct-mR-Hk8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="vuC-FX-ox0">
+                                                            <rect key="frame" x="10" y="8" width="44" height="44"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="44" id="Ba6-17-6WJ"/>
+                                                                <constraint firstAttribute="width" constant="44" id="V3u-Jt-gSM"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="akamffer@mweb.co.za" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGY-Uj-FR4">
+                                                            <rect key="frame" x="64" y="16" width="251" height="28"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                                            <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteCheckmark" translatesAutoresizingMaskIntoConstraints="NO" id="Nfu-ee-2eA">
+                                                            <rect key="frame" x="325" y="20" width="20" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="20" id="PkS-nI-Fd0"/>
+                                                                <constraint firstAttribute="height" constant="20" id="t35-bm-aam"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Nfu-ee-2eA" secondAttribute="trailing" constant="10" id="5T6-d7-7jU"/>
+                                                        <constraint firstItem="wGY-Uj-FR4" firstAttribute="leading" secondItem="vuC-FX-ox0" secondAttribute="trailing" constant="10" id="IBt-k3-81e"/>
+                                                        <constraint firstItem="wGY-Uj-FR4" firstAttribute="top" secondItem="Uct-mR-Hk8" secondAttribute="topMargin" constant="5" id="JFF-ox-CjU"/>
+                                                        <constraint firstItem="Nfu-ee-2eA" firstAttribute="centerY" secondItem="Uct-mR-Hk8" secondAttribute="centerY" id="Lkr-CJ-M2R"/>
+                                                        <constraint firstItem="vuC-FX-ox0" firstAttribute="leading" secondItem="Uct-mR-Hk8" secondAttribute="leading" constant="10" id="TQZ-iY-vh9"/>
+                                                        <constraint firstItem="vuC-FX-ox0" firstAttribute="centerY" secondItem="Uct-mR-Hk8" secondAttribute="centerY" id="Vx7-uN-2O8"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="wGY-Uj-FR4" secondAttribute="bottom" constant="5" id="a7n-k7-ON8"/>
+                                                        <constraint firstItem="Nfu-ee-2eA" firstAttribute="leading" secondItem="wGY-Uj-FR4" secondAttribute="trailing" constant="10" id="akv-ce-hrb"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.25515213609999998" green="0.27285820249999998" blue="0.31181350349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <outlet property="checkImg" destination="Nfu-ee-2eA" id="5rm-em-Dj0"/>
+                                                    <outlet property="emailLbl" destination="wGY-Uj-FR4" id="57S-cY-yTK"/>
+                                                    <outlet property="profileImg" destination="vuC-FX-ox0" id="61Q-ER-oFi"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -770,6 +810,7 @@
         <image name="logoutIcon" width="19" height="21"/>
         <image name="me-tabIcon" width="25" height="25"/>
         <image name="send" width="29" height="29"/>
+        <image name="whiteCheckmark" width="18" height="14"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.50588235290000005" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
 </document>

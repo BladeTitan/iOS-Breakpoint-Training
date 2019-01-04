@@ -27,6 +27,7 @@
 		ED52B89E21DF3D16000BB0C1 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED52B89D21DF3D16000BB0C1 /* FeedTableViewCell.swift */; };
 		ED52B8A021DF3E47000BB0C1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED52B89F21DF3E47000BB0C1 /* Message.swift */; };
 		ED52B8A221DF5443000BB0C1 /* GroupCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED52B8A121DF5443000BB0C1 /* GroupCreateViewController.swift */; };
+		ED52B8A421DF5B77000BB0C1 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED52B8A321DF5B77000BB0C1 /* UserTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		ED52B89D21DF3D16000BB0C1 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		ED52B89F21DF3E47000BB0C1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ED52B8A121DF5443000BB0C1 /* GroupCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCreateViewController.swift; sourceTree = "<group>"; };
+		ED52B8A321DF5B77000BB0C1 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		EEEE5AEF0A6C68FD7ACA62CC /* Pods-Breakpoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakpoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breakpoint/Pods-Breakpoint.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 				ED2B87F321DE1FED005D0BE5 /* InsetTextField.swift */,
 				ED2B87F521DE2569005D0BE5 /* ShadowUIView.swift */,
 				ED52B89D21DF3D16000BB0C1 /* FeedTableViewCell.swift */,
+				ED52B8A321DF5B77000BB0C1 /* UserTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				ED2B87FA21DE39FD005D0BE5 /* MeViewController.swift in Sources */,
 				ED2B87F221DE1FAE005D0BE5 /* LoginViewController.swift in Sources */,
 				ED2B87D821DDF8F1005D0BE5 /* GroupsViewController.swift in Sources */,
+				ED52B8A421DF5B77000BB0C1 /* UserTableViewCell.swift in Sources */,
 				ED2B87D421DDF8F1005D0BE5 /* AppDelegate.swift in Sources */,
 				ED52B89E21DF3D16000BB0C1 /* FeedTableViewCell.swift in Sources */,
 				ED2B87F821DE2765005D0BE5 /* AuthService.swift in Sources */,

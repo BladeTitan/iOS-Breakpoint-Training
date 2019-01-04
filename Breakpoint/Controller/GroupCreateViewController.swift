@@ -18,6 +18,9 @@ class GroupCreateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
     @IBAction func closeBtnPressed(_ sender: Any) {
@@ -27,4 +30,24 @@ class GroupCreateViewController: UIViewController {
     @IBAction func doneBtnPressed(_ sender: Any) {
         
     }
+}
+
+extension GroupCreateViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as? UserTableViewCell {
+            let image = UIImage(named: "defaultProfileImage")!
+
+            cell.setupCell(profileImage: image, email: "test@test.com", isSelected: true)
+            
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+    }
+    
+    
 }
