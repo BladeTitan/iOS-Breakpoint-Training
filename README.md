@@ -9,33 +9,33 @@ This app makes use of Firebase Realtime Database to allow for realtime communica
 ## Final App
 
 <kbd>
-<img src="Docs/View1.PNG" width="400px"/>
+<img src="Docs/View1.png" width="400px"/>
 </kbd>
 
 <kbd>
-<img src="Docs/View2.PNG" width="400px"/>
+<img src="Docs/View2.png" width="400px"/>
 </kbd>
 
 <kbd>
-<img src="Docs/View3.PNG" width="400px"/>
+<img src="Docs/View3.png" width="400px"/>
 </kbd>
 
 <kbd>
-<img src="Docs/View4.PNG" width="400px"/>
+<img src="Docs/View4.png" width="400px"/>
 </kbd>
 
 <kbd>
-<img src="Docs/View5.PNG" width="400px"/>
+<img src="Docs/View5.png" width="400px"/>
 </kbd>
 
 <kbd>
-<img src="Docs/View6.PNG" width="400px"/>
+<img src="Docs/View6.png" width="400px"/>
 </kbd>
 
 <kbd>
-<img src="Docs/View7.PNG" width="400px"/>
+<img src="Docs/View7.png" width="400px"/>
 </kbd>
 
 <kbd>
-<img src="Docs/View8.PNG" width="400px"/>
+<img src="Docs/View8.png" width="400px"/>
 </kbd>
