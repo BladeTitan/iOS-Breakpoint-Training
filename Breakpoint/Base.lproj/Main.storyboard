@@ -634,7 +634,7 @@
         <!--Group Feed View Controller-->
         <scene sceneID="wQH-4O-0lq">
             <objects>
-                <viewController id="I0q-Wx-AOh" customClass="GroupFeedViewController" customModule="Breakpoint" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupFeedViewController" id="I0q-Wx-AOh" customClass="GroupFeedViewController" customModule="Breakpoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e1c-VN-9CX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -677,7 +677,7 @@
                                 <rect key="frame" x="0.0" y="103.5" width="375" height="503.5"/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupFeedTableViewCell" rowHeight="100" id="MIA-QL-k1o" customClass="GroupFeedTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupFeedTableViewCell" rowHeight="100" id="MIA-QL-k1o" customClass="GroupFeedTableViewCell" customModule="Breakpoint" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MIA-QL-k1o" id="JHB-He-lZo">
@@ -729,6 +729,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="I0q-Wx-AOh" id="QZQ-e0-NoJ"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="akamffer@mweb.co.za" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="pXi-Yu-YJt">
                                 <rect key="frame" x="8" y="79" width="359" height="16.5"/>
@@ -789,6 +792,7 @@
                         <viewLayoutGuide key="safeArea" id="aj0-Fy-tj3"/>
                     </view>
                     <connections>
+                        <outlet property="groupTitleLbl" destination="LsX-i0-KWv" id="IqR-35-Vmu"/>
                         <outlet property="memberLbl" destination="pXi-Yu-YJt" id="z68-WW-jsX"/>
                         <outlet property="messageTextField" destination="uUc-l2-gly" id="3YV-l9-uhd"/>
                         <outlet property="messageView" destination="JbS-tQ-yuX" id="KEw-Nq-6tl"/>
